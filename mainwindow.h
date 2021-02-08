@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "liquid.h"
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -17,5 +19,9 @@ public:
 
 private:
     Ui::MainWindow *ui;
+
+public slots:
+    void slot_calculate_new();
+    void slot_set_static_dose(int i);
 };
 #endif // MAINWINDOW_H
