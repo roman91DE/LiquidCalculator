@@ -6,7 +6,12 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     this->setWindowTitle("Liquid Calculator");
     Liquid::set_nicotine_strength(20);
     ui->mg_per_ml_input->setValue(20);
-    ui->mg_per_ml_input->setToolTip("Dosage of your Nicotine Base");
+    // set up tool tips
+    ui->mg_per_ml_input->setToolTip("Dosage of your Nicotine Base?");
+    ui->aroma_input->setToolTip("Total Percentage of Flavour in finished Liquid?");
+    ui->total_input->setToolTip("How many ml of Liquid dou you want to prepare?");
+    ui->nicotin_input->setToolTip("What dosage of nicotine do you want in the finished Liquid?");
+    // connecting
     connect(ui->calc_button, SIGNAL(clicked()), this, SLOT(slot_calculate_new()));
     connect(ui->mg_per_ml_input, SIGNAL(valueChanged(int)), this, SLOT(slot_set_static_dose(int)));
 
