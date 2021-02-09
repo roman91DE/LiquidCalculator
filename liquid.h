@@ -15,6 +15,7 @@ class Liquid {
         void calculate_amounts();
         double get_nicotine() const;
         double get_base() const;
+        double get_aroma() const;
 };
 
 #endif // LIQUID_H
